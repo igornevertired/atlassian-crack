@@ -10,13 +10,13 @@ services:
       ATL_JDBC_URL: 'jdbc:postgresql://db-con:5432/confluence'
       ATL_JDBC_USER: 'confluence'
       ATL_JDBC_PASSWORD: 'o3B5\U[4Edt03dBP/Miv'
-      JAVA_OPTS: '-javacrack:/atlassian-crack.jar'
+      JAVA_OPTS: '-javaagent:/atlassian-agent.jar'
       JVM_MINIMUM_MEMORY: 512m
       JVM_MAXIMUM_MEMORY: 2048m
 
     volumes:
       - confluence-data:/var/atlassian/application-data/confluence
-      - ./crack/atlassian-agent.bak:/atlassian-crack.jar:ro
+      - ./agent/atlassian-agent.bak:/atlassian-agent.jar:ro
     networks:
       my-net:
        aliases:

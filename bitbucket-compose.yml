@@ -1,4 +1,4 @@
-version: "3.4"
+version: '3.4'
 services:
   bitbucket:
     image: "atlassian/bitbucket-server:latest"    
@@ -7,7 +7,7 @@ services:
     restart: always
     environment:
       BITBUCKET_HOME: /var/atlassian/application-data/bitbucket/
-      JAVA_OPTS: '-javacrack:/atlassian-crack.jar'
+      JAVA_OPTS: '-javaagent:/atlassian-agent.jar'
       JDBC_DRIVER: org.postgresql.Driver
       JDBC_URL: 'jdbc:postgresql://db:5432/bitbucket'
       JDBC_USER: bitbucket
@@ -17,7 +17,7 @@ services:
 
     volumes:
       - bitbucket-Data:/var/atlassian/application-data/bitbucket
-      - ./crack/atlassian-agent.bak:/atlassian-crack.jar:ro
+      - ./agent/atlassian-agent.bak:/atlassian-agent.jar:ro
     networks:
       my-net:
        aliases:

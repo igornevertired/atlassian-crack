@@ -11,13 +11,13 @@ services:
       FECRU_CONFIGURE_DB_PORT: '5432'
       FECRU_CONFIGURE_DB_USER: fisheye
       FECRU_CONFIGURE_DB_PASSWORD: 'PZz-0oOmnW#fgT:kc^7c'
-      FISHEYE_OPTS: '-javacrack:/atlassian-crack.jar'
+      FISHEYE_OPTS: '-javaagent:/atlassian-agent.jar'
       JVM_MINIMUM_MEMORY: 512m
       JVM_MAXIMUM_MEMORY: 2048m
 
     volumes:
       - fisheye-vol:/atlassian/data/fisheye
-      - ./crack/atlassian-agent.bak:/atlassian-crack.jar:ro
+      - ./agent/atlassian-agent.bak:/atlassian-agent.jar:ro
     networks:
       my-net:
        aliases:
