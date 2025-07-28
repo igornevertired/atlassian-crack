@@ -33,7 +33,7 @@ services:
 
     volumes:
       - fisheye-vol:/atlassian/data/fisheye
-      - ./agent/atlassian-agent.bak:/atlassian-agent.jar:ro
+      - ./crack/atlassian-agent.bak:/atlassian-agent.jar:ro
     networks:
       my-net:
        aliases:

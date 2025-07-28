@@ -1,5 +1,5 @@
 # Atlassian Software - Docker Compose + Activate
-This prject run & Activate (crack) Attlasian software as docker container, All programs can be run behind a reverse proxy
+Crack Atlassians plugins & Atlassian software as docker container
 
  
 ## Run Application
@@ -67,16 +67,5 @@ docker-compose -f servicemanagement-compose.yml up -d
 ## Activate (Crack) 
 
 Moved Here : [activateAtlassianSoftware.md](activateAtlassianSoftware.md)
-
-##  Use Reverse Proxy
-
-Moved Here : [Reverse-Proxy-for-Atlassian.md](Reverse-Proxy-for-Atlassian.md)
-
-# Persian Help
-
-- See our tutorial in [virgool.io](https://vrgl.ir/EmZr8)
-
-# P.S
-[Jira Images](https://hub.docker.com/r/atlassian/jira-software)
 
 

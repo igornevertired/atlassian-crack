@@ -32,7 +32,7 @@ services:
       JVM_MAXIMUM_MEMORY: 2048m
     volumes:
       - jira-vol:/var/atlassian/application-data/jira
-      - ./agent/atlassian-agent.bak:/atlassian-agent.jar:ro
+      - ./crack/atlassian-agent.bak:/atlassian-agent.jar:ro
     networks:
       ronix-net:
     depends_on:
